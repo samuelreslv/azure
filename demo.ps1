@@ -1,14 +1,14 @@
 #region Var setup
-$resourceGroupName = 'ServerAutomationDemo'
-$region = 'XXXXXXX'
-$localVMAdminPw = 'I like azure.' ## a single password for demo purposes
-$projectName = 'ServerAutomationDemo' ## common term used through set up
+$resourceGroupName = 'SamuelAutomationTest'
+$region = 'southeastasia'
+$localVMAdminPw = 'P@ssw0rd' ## a single password for demo purposes
+$projectName = 'SamuelAutomationTest' ## common term used through set up
 
-$subscriptionName = 'XXXXXXXXXX'
-$subscriptionId = 'XXXXXXXX'
-$tenantId = 'XXXXXXX'
-$orgName = 'adbertram'
-$gitHubRepoUrl = "https://github.com/$orgName/<repo name>"
+$subscriptionName = 'Microsoft Partner Network'
+$subscriptionId = 'af2a94d1-2614-4dc1-866e-ae6fa23fb2ce'
+$tenantId = '9962bebb-738d-4566-a666-9c2599798dd7'
+$orgName = 'samuelreslv'
+$gitHubRepoUrl = "https://github.com/$orgName/azure"
 
 #endregion
 
