@@ -8,24 +8,24 @@ trigger:
       - server.parameters.json
 
 pool:
-  vmImage: "ubuntu-latest"
+  vmImage: "windows-2022"
 
 variables:
-  - group: ServerAutomationDemo
+  - group: SamuelAutomationTest
   - name: azure_resource_group_name
     value: "ServerProvisionTesting-$(Build.BuildId)"
   - name: subscription_id
-    value: "XXXXXXXXXXXXXXXXXXXXXXXXXX"
+    value: "af2a94d1-2614-4dc1-866e-ae6fa23fb2ce"
   - name: application_id
-    value: "XXXXXXXXXXXXXXXXXXXXXXXXXX"
+    value: "54762b98-34d6-46b2-9084-02a61eb28c67"
   - name: tenant_id
-    value: "XXXXXXXXXXXXXXXXXXXXXXXXXX"
+    value: "9962bebb-738d-4566-a666-9c2599798dd7"
 
 steps:
   - task: PowerShell@2
     inputs:
       filePath: "connect-azure.ps1"
-      arguments: '-ServicePrincipalPassword "$(ServerAutomationDemo-AppPw)" -SubscriptionId $(subscription_id) -ApplicationId $(application_id) -TenantId $(tenant_id)'
+      arguments: '-ServicePrincipalPassword "$(SamuelAutomationTest-AppPw)" -SubscriptionId $(subscription_id) -ApplicationId $(application_id) -TenantId $(tenant_id)'
   - task: PowerShell@2
     inputs:
       targetType: "inline"
